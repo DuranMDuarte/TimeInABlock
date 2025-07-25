@@ -50,7 +50,7 @@
     {
       "name": "TimeAcceleratorRedstone",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "time_accelerator_redstone",
       "metadata": {
@@ -105,6 +105,31 @@
             "name": "world",
             "type": "world"
           }
+        ]
+      }
+    },
+    {
+      "name": "TiabApiHolder",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "tiab_api_holder",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/timeinablock/TiabApiHolder.java"
+        ]
+      }
+    },
+    {
+      "name": "Debugui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debugui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/timeinablock/client/gui/DebuguiScreen.java",
+          "src/main/java/net/mcreator/timeinablock/world/inventory/DebuguiMenu.java"
         ]
       }
     }

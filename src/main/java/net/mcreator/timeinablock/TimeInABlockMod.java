@@ -17,6 +17,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.timeinablock.init.TimeInABlockModMenus;
 import net.mcreator.timeinablock.init.TimeInABlockModItems;
 import net.mcreator.timeinablock.init.TimeInABlockModBlocks;
 import net.mcreator.timeinablock.init.TimeInABlockModBlockEntities;
@@ -44,6 +45,8 @@ public class TimeInABlockMod {
 		TimeInABlockModBlocks.REGISTRY.register(bus);
 		TimeInABlockModBlockEntities.REGISTRY.register(bus);
 		TimeInABlockModItems.REGISTRY.register(bus);
+
+		TimeInABlockModMenus.REGISTRY.register(bus);
 
 		// Start of user code block mod init
 		// End of user code block mod init

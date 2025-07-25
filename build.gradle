@@ -1,24 +1,40 @@
 plugins {
     id 'eclipse'
-    id 'net.minecraftforge.gradle' version '[6.0.16,6.2)'
+    id 'net.minecraftforge.gradle' version '[6.0.16,6.2)' //
 }
 
 version = '1.0'
-group = 'com.yourname.modid'
-archivesBaseName = 'modid'
+group = 'com.yourname.modid' // Altere 'com.yourname.modid' para o seu grupo ID
+archivesBaseName = 'modid' // Altere 'modid' para o nome do seu mod
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+java.toolchain.languageVersion = JavaLanguageVersion.of(17) // Certifique-se que o seu JDK é o 17
+
+repositories {
+    maven {
+        url "https://s01.oss.sonatype.org/service/local/repositories/releases/content/io/github/realmangorage/"
+    }
+    maven {
+        url "https://cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+    maven {
+        url = "https://maven.theillusivec4.top/"
+    }
+}
 
 minecraft {
+    // Mapeamentos para a versão do Minecraft
     mappings channel: 'official', version: '1.20.1'
 
-    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+    accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') //
 
-    copyIdeResources = true
+    copyIdeResources = true //
 
     runs {
         client {
-            def mcreatorJvmOptions = System.getenv('MCREATOR_JVM_OPTIONS')
+            def mcreatorJvmOptions = System.getenv('MCREATOR_JVM_OPTIONS') //
             if (mcreatorJvmOptions) {
                 jvmArgs += mcreatorJvmOptions.split("\\s+").findAll { it.trim() }.toList()
             }
@@ -27,7 +43,7 @@ minecraft {
         server {
         }
 
-        configureEach {
+        configureEach { //
             workingDirectory project.file('run')
 
             property 'forge.logging.markers', 'REGISTRIES'
@@ -43,12 +59,17 @@ minecraft {
 }
 
 dependencies {
+    // Dependência do Forge para Minecraft 1.20.1
     minecraft 'net.minecraftforge:forge:1.20.1-47.3.0'
+
+    // Dependência da API do Time In A Bottle via Curse Maven
+    // Esta é a forma oficial de adicionar a API do TIAB.
+    runtimeOnly fg.deobf("curse.maven:time-in-a-bottle-forge-895919:4744787") // TIAB mod
+    implementation fg.deobf("org.mangorage:tiab:1.0.0:api") // TIAB api
 }
 
 tasks.withType(JavaCompile).configureEach {
-    options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+    options.encoding = 'UTF-8' //
 }
 
 apply from: 'mcreator.gradle'
-
