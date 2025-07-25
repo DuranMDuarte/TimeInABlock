@@ -62,6 +62,7 @@ dependencies {
     // Dependência do Forge para Minecraft 1.20.1
     minecraft 'net.minecraftforge:forge:1.20.1-47.3.0'
 
+
     // Dependência da API do Time In A Bottle via Curse Maven
     // Esta é a forma oficial de adicionar a API do TIAB.
     runtimeOnly fg.deobf("curse.maven:time-in-a-bottle-forge-895919:4744787") // TIAB mod

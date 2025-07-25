@@ -58,7 +58,7 @@
     "material": {
       "value": "NONE"
     },
-    "tickRate": 0,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -103,7 +103,8 @@
     "vanillaToolTier": "NONE",
     "isBonemealable": false,
     "hasInventory": true,
-    "openGUIOnRightClick": false,
+    "guiBoundTo": "Debugui",
+    "openGUIOnRightClick": true,
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
@@ -120,9 +121,6 @@
     "fluidRestrictions": [],
     "onTickUpdate": {
       "name": "TimeAcceleratorBlockTickProcedure"
-    },
-    "onRedstoneOn": {
-      "name": "TimeAcceleratorRedstone"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

@@ -20,8 +20,8 @@
     {
       "name": "TimeAcceleratorBlockTickProcedure",
       "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
+      "compiles": false,
+      "locked_code": true,
       "registry_name": "time_accelerator_block_tick_procedure",
       "metadata": {
         "files": [
@@ -130,6 +130,18 @@
         "files": [
           "src/main/java/net/mcreator/timeinablock/client/gui/DebuguiScreen.java",
           "src/main/java/net/mcreator/timeinablock/world/inventory/DebuguiMenu.java"
+        ]
+      }
+    },
+    {
+      "name": "TiabAPIHandler",
+      "type": "code",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "tiab_api_handler",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/timeinablock/TiabAPIHandler.java"
         ]
       }
     }

@@ -13,6 +13,6 @@ public class TimeAcceleratorTooltipProcedure {
 					return blockEntity.getPersistentData().getDouble(tag);
 				return -1;
 			}
-		}.getValue(world, BlockPos.containing(x, y, z), "TimeAcceleratorTooltip"));
+		}.getValue(world, BlockPos.containing(x, y, z), "storedTime"));
 	}
 }
