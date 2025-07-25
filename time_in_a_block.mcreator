@@ -1,0 +1,110 @@
+{
+  "mod_elements": [
+    {
+      "name": "TimeAcceleratorBlock",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_accelerator_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/timeinablock/block/TimeAcceleratorBlockBlock.java",
+          "src/main/resources/assets/time_in_a_block/models/block/time_accelerator_block.json",
+          "src/main/resources/assets/time_in_a_block/models/item/time_accelerator_block.json",
+          "src/main/java/net/mcreator/timeinablock/block/entity/TimeAcceleratorBlockBlockEntity.java",
+          "src/main/resources/data/time_in_a_block/loot_tables/blocks/time_accelerator_block.json",
+          "src/main/resources/assets/time_in_a_block/blockstates/time_accelerator_block.json"
+        ]
+      }
+    },
+    {
+      "name": "TimeAcceleratorBlockTickProcedure",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_accelerator_block_tick_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/timeinablock/procedures/TimeAcceleratorBlockTickProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TimeAcceleratorRedstone",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_accelerator_redstone",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/timeinablock/procedures/TimeAcceleratorRedstoneProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "block.time_in_a_block.time_accelerator_block": "Time Accelerator Block"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "time_in_a_block",
+    "modName": "Time In a Block",
+    "version": "1.0.0",
+    "author": "DuranMDuarte, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.20.1",
+    "modElementsPackage": "net.mcreator.timeinablock"
+  },
+  "mcreatorVersion": 202400452410
+}

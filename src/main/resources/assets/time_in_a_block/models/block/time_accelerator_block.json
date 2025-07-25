@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "minecraft:block/repeating_command_block_back",
+    "particle": "minecraft:block/repeating_command_block_back"
+  },
+  "render_type": "solid"
+}
