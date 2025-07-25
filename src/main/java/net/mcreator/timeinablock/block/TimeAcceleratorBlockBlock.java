@@ -7,22 +7,42 @@ import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.world.Containers;
 import net.minecraft.util.RandomSource;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.timeinablock.procedures.TimeAcceleratorTooltipProcedure;
 import net.mcreator.timeinablock.procedures.TimeAcceleratorRedstoneProcedure;
 import net.mcreator.timeinablock.procedures.TimeAcceleratorBlockTickProcedureProcedure;
 import net.mcreator.timeinablock.block.entity.TimeAcceleratorBlockBlockEntity;
 
+import java.util.List;
+
 public class TimeAcceleratorBlockBlock extends Block implements EntityBlock {
 	public TimeAcceleratorBlockBlock() {
 		super(BlockBehaviour.Properties.of().sound(SoundType.GRAVEL).strength(1f, 10f));
+	}
+
+	@Override
+	public void appendHoverText(ItemStack itemstack, BlockGetter level, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, level, list, flag);
+		Entity entity = itemstack.getEntityRepresentation();
+		String hoverText = TimeAcceleratorTooltipProcedure.execute(level instanceof Level ? (LevelAccessor) level : null, entity != null ? entity.getX() : 0.0, entity != null ? entity.getY() : 0.0, entity != null ? entity.getZ() : 0.0);
+		if (hoverText != null) {
+			for (String line : hoverText.split("\n")) {
+				list.add(Component.literal(line));
+			}
+		}
 	}
 
 	@Override

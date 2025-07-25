@@ -36,7 +36,8 @@
     "customProperties": [],
     "name": "Time Accelerator Block",
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "TimeAcceleratorTooltip"
     },
     "hardness": 1.0,
     "resistance": 10.0,

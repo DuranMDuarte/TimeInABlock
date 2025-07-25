@@ -50,12 +50,43 @@
     {
       "name": "TimeAcceleratorRedstone",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "time_accelerator_redstone",
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/timeinablock/procedures/TimeAcceleratorRedstoneProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TimeAcceleratorTooltip",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_accelerator_tooltip",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/timeinablock/procedures/TimeAcceleratorTooltipProcedure.java"
         ],
         "dependencies": [
           {
